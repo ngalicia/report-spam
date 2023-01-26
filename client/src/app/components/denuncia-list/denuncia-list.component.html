@@ -1,0 +1,90 @@
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-3">
+        <h1 class="m-0 text-dark">Denuncias</h1>
+      </div><!-- /.col -->
+      <div class="col-sm-3">
+        <a routerLink="/denuncia/add" class="btn btn-primary">Nuevo</a>
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a routerLink="/">Inicio</a></li>
+          <li class="breadcrumb-item active">Denuncias</li>
+        </ol>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<div class="content">
+  <div class="container-fluid">
+
+
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Denuncias</h3>
+          </div><!-- /.card-header -->
+
+          <div class="card-body table-responsive p-0" style="height: 300px;">
+            <table class="table table-hover table-head-fixed">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Tipo</th>
+                  <th>Contacto</th>
+                  <th>Comentario</th>
+                  <th>Opciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let denuncia of denuncias; index as i">
+                  <td>{{ i+1 }}</td>
+                  <td>{{ denuncia.tipo_nombre }}</td>
+                  <td>{{ denuncia.codigo }} {{ denuncia.numero }}</td>
+                  <td>{{ denuncia.comentario }}</td>
+                  <td>
+                    <a routerLink="/denuncia/edit/{{ denuncia.denuncia }}" class="btn btn-warning">Editar</a>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" attr.data-target="#modal-delete-{{ denuncia.denuncia }}">Eliminar</button>
+                  </td>
+                  
+                  <div class="modal fade" id="modal-delete-{{ denuncia.denuncia }}" tabindex="-1" data-backdrop="static">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title">Eliminar Denuncia</h4>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p>¿Está seguro de que desea eliminar la denuncia al contacto {{ denuncia.codigo }} {{ denuncia.numero }}?</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                          <button class="btn btn-danger" (click)="deleteDenuncia(denuncia.denuncia)" data-dismiss="modal">Eliminar</button>
+                        </div>
+                      </div>
+                      <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                  </div>
+                  <!-- /.modal -->
+                  
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- /.card-body -->
+
+          
+        </div><!-- /.card -->
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content -->

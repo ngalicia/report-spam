@@ -1,0 +1,55 @@
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0 text-dark">Editar Tipo {{ id }}</h1>
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+          <li class="breadcrumb-item active">Editar Tipo</li>
+        </ol>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<div class="content">
+  <div class="container-fluid">
+    
+    <!-- general form elements -->
+    <div class="card card-primary">
+      <div class="card-header">
+        <h3 class="card-title">Editar Tipo</h3>
+      </div>
+      <!-- /.card-header -->
+      <!-- form start -->
+      <form role="form" (submit)="editTipo()" ngNativeValidate>
+        <div class="card-body">
+      
+          <div class="form-group row">
+            <label for="nombre" class="col-sm-2 col-form-label">Nombre*</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="nombre" [(ngModel)]="tipo.nombre" placeholder="Nombre">
+            </div>
+          </div>
+
+        </div>
+        <!-- /.card-body -->
+        
+        <div class="card-footer">
+          <button type="submit" class="btn btn-primary">Modificar</button>
+          <a routerLink="/tipos" class="btn btn-default">Cancelar</a>
+        </div>
+        <!-- /.card-footer -->
+
+      </form>
+    </div>
+    <!-- /.card -->
+    
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content -->

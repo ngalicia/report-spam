@@ -1,0 +1,71 @@
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0 text-dark">Nuevo Contacto</h1>
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+          <li class="breadcrumb-item active">Nuevo Contacto</li>
+        </ol>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<div class="content">
+  <div class="container-fluid">
+    
+    <!-- general form elements -->
+    <div class="card card-primary">
+      <div class="card-header">
+        <h3 class="card-title">Nuevo Contacto</h3>
+      </div>
+      <!-- /.card-header -->
+      <!-- form start -->
+      <form role="form" (submit)="addContacto()" ngNativeValidate>
+        <div class="card-body">
+
+          <div class="row">
+            <div class="col-sm-12">
+              <!-- text input -->
+              <div class="form-group row">
+                <label for="codigo" class="col-sm-2 col-form-label">Código*</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="codigo" [(ngModel)]="contacto.codigo" placeholder="Código">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <!-- text input -->
+              <div class="form-group row">
+                <label for="numero" class="col-sm-2 col-form-label">Número*</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="numero" [(ngModel)]="contacto.numero" placeholder="Número">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.card-body -->
+        
+        <div class="card-footer">
+          <button type="submit" class="btn btn-primary">Guardar</button>
+          <a routerLink="/contactos" class="btn btn-default">Cancelar</a>
+        </div>
+        <!-- /.card-footer -->
+
+      </form>
+    </div>
+    <!-- /.card -->
+    
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content -->
