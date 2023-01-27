@@ -69,15 +69,35 @@
           <div class="form-group row">
             <label for="valoracion" class="col-sm-2 col-form-label">Valoración</label>
             <div class="col-sm-10">
-              <!-- select -->
-              <select name="valoracion" class="form-control" [(ngModel)]="denuncia.valoracion">
-                <option value="0">-- Seleccionar valoración --</option>
-                <option value="1">*</option>
-                <option value="2">**</option>
-                <option value="3">***</option>
-                <option value="4">****</option>
-                <option value="5">*****</option>
-              </select>
+              <!-- radio -->
+              <div class="form-group row">
+                <div class="col-sm-12 form-inline">
+                  <div class="custom-control custom-radio" style="margin-right: 20px;">
+                    <input class="custom-control-input" type="radio" id="valoracion0" name="valoracion" [(ngModel)]="denuncia.valoracion" [value]="0">
+                    <label for="valoracion0" class="custom-control-label">0</label>
+                  </div>
+                  <div class="custom-control custom-radio" style="margin-right: 20px;">
+                    <input class="custom-control-input" type="radio" id="valoracion1" name="valoracion" [(ngModel)]="denuncia.valoracion" [value]="1">
+                    <label for="valoracion1" class="custom-control-label">1</label>
+                  </div>
+                  <div class="custom-control custom-radio" style="margin-right: 20px;">
+                    <input class="custom-control-input" type="radio" id="valoracion2" name="valoracion" [(ngModel)]="denuncia.valoracion" [value]="2">
+                    <label for="valoracion2" class="custom-control-label">2</label>
+                  </div>
+                  <div class="custom-control custom-radio" style="margin-right: 20px;">
+                    <input class="custom-control-input" type="radio" id="valoracion3" name="valoracion" [(ngModel)]="denuncia.valoracion" [value]="3">
+                    <label for="valoracion3" class="custom-control-label">3</label>
+                  </div>
+                  <div class="custom-control custom-radio" style="margin-right: 20px;">
+                    <input class="custom-control-input" type="radio" id="valoracion4" name="valoracion" [(ngModel)]="denuncia.valoracion" [value]="4">
+                    <label for="valoracion4" class="custom-control-label">4</label>
+                  </div>
+                  <div class="custom-control custom-radio" style="margin-right: 20px;">
+                    <input class="custom-control-input" type="radio" id="valoracion5" name="valoracion" [(ngModel)]="denuncia.valoracion" [value]="5">
+                    <label for="valoracion5" class="custom-control-label">5</label>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
