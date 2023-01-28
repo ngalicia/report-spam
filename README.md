@@ -1,5 +1,39 @@
 # report-spam
 
+## Descripción
+
+Sitio web desarrollado con Angular, para almacenar denuncias de spam.
+
+## Screenshots
+
+- Menú principal
+
+![1](https://github.com/ngalicia/report-spam/raw/main/img/1.png)
+
+- Listado de tipos
+
+![2](https://github.com/ngalicia/report-spam/raw/main/img/2.png)
+
+- Listado de contactos
+
+![3](https://github.com/ngalicia/report-spam/raw/main/img/3.png)
+
+- Crear denuncia
+
+![4](https://github.com/ngalicia/report-spam/raw/main/img/4.png)
+
+- Editar denuncia
+
+![5](https://github.com/ngalicia/report-spam/raw/main/img/5.png)
+
+- Listado de denuncias
+
+![6](https://github.com/ngalicia/report-spam/raw/main/img/6.png)
+
+- Eliminar denuncia
+
+![7](https://github.com/ngalicia/report-spam/raw/main/img/7.png)
+
 ## Proyecto de frontend con Angular
 
 Instalar Angular:
